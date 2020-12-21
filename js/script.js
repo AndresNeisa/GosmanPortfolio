@@ -9,16 +9,16 @@ function onLoad() {
     }
     );
 
-    var newImg = new Image;
-    newImg.onload = function () {
-        _img.src = this.src;
-    }
-    newImg.src = '../Images/CNN News.jpg';
+    // var newImg = new Image;
+    // newImg.onload = function () {
+    //     _img.src = this.src;
+    // }
+    // newImg.src = '../Images/CNN News.jpg';
 }
 
 function showProjectImage() {
     let container = document.querySelector('.content__img');
-    container.style.backgroundImage = `url("../Images/${this.innerHTML}.jpg`;
+    container.style.backgroundImage = `url("Images/${this.innerHTML}.jpg")`;
     container.style.opacity = 1;
     container.style.transform = `scale(1)`;
 }
