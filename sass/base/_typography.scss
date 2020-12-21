@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "SF Pro Display";
+    src:url("../fonts/SF-Pro-Display-Regular.otf");
+}
+
+.header-primary{
+    font-family: playfair-display, serif;
+    font-size: 22rem;
+    font-weight: 400;
+    line-height: 90%;
+}
+
+.header-secondary{
+    font-family: playfair-display, serif;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 105%;
+}
+
+.header-tertiary{
+    font-size: 1.6rem;
+    line-height: 1.76rem;
+    font-weight: 400;
+
+    margin-top: 1.2rem;
+}
+
+.paragraph{
+    font-size: 2rem;
+    line-height: 120%;
+    font-weight: 400;
+}

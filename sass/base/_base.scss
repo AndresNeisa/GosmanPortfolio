@@ -1,0 +1,32 @@
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+
+    @media only screen and (max-width: 1400px){
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: 1100px){
+        font-size: 42.9%;
+    }
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 400;
+}
+
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+    max-width: 120rem; 
+}

@@ -1,0 +1,94 @@
+.project{
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &--title{
+            flex:  0 1 0;
+            display: inline;
+            margin-bottom: -3rem;
+        }
+
+        &--numeration{
+            flex: 0 1 41.5%;
+            font-size: 1.6rem;
+            opacity: 0.6;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    &__view{
+
+        display: flex;
+        justify-content: flex-end;
+
+        &__link{
+
+            
+            
+            &:link,
+            &:visited{
+                text-decoration: none;
+                color: inherit;
+                font-size: 1.6rem;
+            }
+
+            &:hover{
+                // color: red;
+        
+                & span{
+                    margin-left: 8px;
+                }
+            }
+
+            & span{
+                transition: margin-left 0.2s;
+            }
+        }
+         
+    }
+
+    &__links-section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__links{
+
+        opacity: 0.3;
+        transition: all 0.2s;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &::after,
+        &::before{
+            font-size: 1.6rem;
+            margin: 0 2rem;
+        }
+
+        &--previous{
+            &::after{
+                content: "(02)";
+            }
+        }
+
+        &--next{
+            &::before{
+                content: "(03)";
+            }
+        }
+    }
+}
