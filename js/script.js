@@ -8,6 +8,12 @@ function onLoad() {
         element.addEventListener("mouseout", removeProjectImage);
     }
     );
+
+    var newImg = new Image;
+    newImg.onload = function () {
+        _img.src = this.src;
+    }
+    newImg.src = '../Images/CNN News.jpg';
 }
 
 function showProjectImage() {
