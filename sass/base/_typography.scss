@@ -5,28 +5,36 @@
 
 .header-primary{
     font-family: playfair-display, serif;
-    font-size: 22rem;
+    font-size: Max(22rem, 90px);
     font-weight: 400;
     line-height: 90%;
+
+    @media only screen and (max-width: $phone-screen){
+        font-size: Max(18rem, 90px);;
+    }
+
+    @media only screen and (max-width: $phone-screen-small){
+        font-size: Max(15rem, 75px);;
+    }
 }
 
 .header-secondary{
     font-family: playfair-display, serif;
-    font-size: 6rem;
+    font-size: Max(6rem, 40px);
     font-weight: 400;
     line-height: 105%;
 }
 
 .header-tertiary{
-    font-size: 1.6rem;
-    line-height: 1.76rem;
+    font-size: Max(1.6rem, 12px);
+    line-height: 110%;
     font-weight: 400;
 
     margin-top: 1.2rem;
 }
 
 .paragraph{
-    font-size: 2rem;
+    font-size: Max(2rem, 14px);
     line-height: 120%;
     font-weight: 400;
 }

@@ -1,6 +1,32 @@
 .hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $phone-screen){
+        flex-direction: column;
+    }
+
     &__img{
         margin-top: 1.8rem;
         width: 100%;
+    }
+
+    &__description {
+        flex: 0 1 41.5%;
+
+        @media only screen and (max-width: $phone-screen){
+            //transform: translateY(-33%);
+            margin-top: -150px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+      }
+
+    &__text{
+        font-family: playfair-display, serif;
+        font-size: Max(22rem, 110px);
+        font-weight: 400;
+        line-height: 90%;
     }
 }

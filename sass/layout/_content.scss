@@ -1,83 +1,135 @@
-.content{
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  
+
+  &__title { 
+    flex: 1 1 auto;
+    margin-right: 20rem;
+    text-align: right;
+
+    @media only screen and (max-width: $phone-screen){
+      margin-right: 0;
+      text-align: initial;
+      margin-bottom: 5rem;
+  }
+  }
+
+  &__description {
+    flex: 0 1 41.5%;
+    position: relative;
+
+    @media only screen and (max-width: $phone-screen){
+      flex: 0 1 50%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 40rem;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s;
+    transition-delay: 0.1s;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__list {
+    list-style: none;
+    counter-reset: item;
+  }
+
+  &__item {
+    font-size: Max(2rem, 14px);
+    line-height: 200%;
+
+    &::before {
+      font-size: Max(1.4rem, 12px);
+      font-weight: 300;
+      opacity: 0.6;
+      content: "(0" counter(item) ")";
+      counter-increment: item;
+
+      margin-right: 2.8rem;
+    }
+
+    @media only screen and (max-width: $phone-screen){
+      display: flex;
+      transform: translateX(-4rem);
+
+      &::before{
+        margin-right: 0;
+        transform: translateX(-5rem);
+      }
+    }
+  }
+
+  &__paragraph {
+    &--s {
+      font-size: Max(1.2rem, 12px);
+      font-weight: 300;
+      line-height: 120%;
+      opacity: 0.6;
+      width: 70%;
+
+      @media only screen and (max-width: $phone-screen) {
+        width: calc(100% + 5rem);
+        margin-left: -5rem;
+      }
+    }
+
+    &--l {
+      font-size: Max(2.6rem, 14px);
+      font-weight: 500;
+      padding-right: 16.6rem;
+      line-height: 120%;
+
+      @media only screen and (max-width: $phone-screen) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__social-media {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-wrap: wrap;
 
-    &__title{
-        flex: 1 1 auto;
-        margin-right: 20rem;
-        text-align: right;
+    & > * {
+      flex-basis: 50%;
+      margin-top: 3rem;
 
+      @media only screen and (max-width: $phone-screen) {
+        flex-basis: 100%;
+      }
     }
 
-    &__description{
-            flex: 0 1 41.5%;
+    &__link {
+      transition: background-position 0.2s ease-in;
+
+      &:link,
+      &:visited {
+        font-size: Max(1.6rem, 12px);
+        text-decoration: none;
+        color: inherit;
+
+        background-size: 250%;
+
+        background-image: linear-gradient(
+          120deg,
+          #fff 0%,
+          #fff 50%,
+          rgba(#fff, 0.3) 50%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &:hover {
+        background-position: 0%;
+      }
     }
-
-    &__img{
-        width: 100%;
-        height: 40rem;
-        opacity: 0;
-        transform: scale(0.5);
-        transition: all 0.2s;
-        transition-delay: 0.1s;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    &__list{
-        list-style: none;
-        counter-reset: item;
-    }
-
-    &__item{
-
-        font-size: 2rem;
-        line-height: 200%;
-        
-       
-        &::before{
-            font-size: 1.4rem;
-            font-weight: 300;
-            opacity: 0.6;
-            content: "(0" counter(item) ")";
-            counter-increment: item;
-
-            margin-right: 2.8rem;
-        }
-    }
-
-    &__paragraph{
-        &--s{
-            font-size: 1.2rem;
-            font-weight: 300;
-            line-height: 1.44rem;
-            opacity: 0.6;
-            width: 70%;
-        }
-    
-        &--l{
-            font-size: 2.6rem;
-            font-weight: 500;
-            padding-right: 16.6rem;
-            line-height: 120%;
-        }
-    }
-
-    &__social-media{
-        display: flex;
-        flex-wrap: wrap;
-
-        &__link{
-            &:link,
-            &:visited{
-                font-size: 1.6rem;
-                text-decoration: none;
-                color: inherit;
-            }
-            margin-top: 3rem;
-            flex-basis: 50%;
-        }
-    }
-
-} 
+  }
+}

@@ -1,0 +1,37 @@
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 41.5%;
+    grid-template-rows: auto auto;
+
+    &__title{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-right: 20rem;
+        text-align: right;
+    }
+
+    @media only screen and (max-width: $phone-screen) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "sub-title sub-title"
+            ". title"
+            ". description";
+
+            &__title{
+                grid-area: title;
+                margin-right: 0;
+                text-align: initial;
+                margin-bottom: 5rem;
+            }
+
+            &__sub-title{
+                grid-area: sub-title;
+            }
+        
+            &__description{
+                grid-area: description;
+            }
+    }
+
+}

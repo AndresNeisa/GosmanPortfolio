@@ -16,6 +16,10 @@ html{
     @media only screen and (max-width: 1100px){
         font-size: 42.9%;
     }
+
+    @media only screen and (max-width: $tablet-screen){
+        font-size: 31.25%;
+    }
 }
 
 body {
@@ -29,4 +33,16 @@ body {
     width: 75%;
     margin: 0 auto;
     max-width: 120rem; 
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column; 
+
+    @media only screen and (max-width: $tablet-screen){
+        width: 80%;
+        max-width: 240rem; 
+    }
+
+    @media only screen and (max-width: $phone-screen){
+        width: 89.5%;
+    }
 }

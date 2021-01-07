@@ -1,0 +1,12 @@
+.projects-section{
+    
+    @media only screen and (max-width: $phone-screen) {
+        & .content__title{
+            display: none; 
+        } 
+
+        & .content__description {
+            flex: 0 1 100%
+        }
+      }
+} 
