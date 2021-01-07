@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded", onLoad);
 
-
 function onLoad() {
     projects = document.querySelectorAll(".projects__link");
     projects.forEach(element => {
@@ -21,14 +20,6 @@ function onLoad() {
         element.addEventListener("mouseout", socialMediaHoverOff.bind(null, socialMedia));
     })
 
-
-    
-
-    // var newImg = new Image;
-    // newImg.onload = function () {
-    //     _img.src = this.src;
-    // }
-    // newImg.src = '../Images/CNN News.jpg';
 }
 
 function showProjectImage() {
@@ -44,14 +35,38 @@ function removeProjectImage() {
     container.style.transform = `scale(0.5)`;
 }
 
-function socialMediaHoverOn(socialMedia){
+function socialMediaHoverOn(socialMedia) {
     socialMedia.forEach(element => {
         element.classList.add("footer__link--hidden");
     })
 }
 
-function socialMediaHoverOff(socialMedia){
+function socialMediaHoverOff(socialMedia) {
     socialMedia.forEach(element => {
         element.classList.remove("footer__link--hidden");
     })
 }
+
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2
+}
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+        }
+        else {
+            entry.target.classList.remove("is-visible");
+        }
+    });
+}, options);
+
+const targets = document.querySelectorAll(".show-on-scroll");
+targets.forEach(target => observer.observe(target));
+
+// targets.forEach(function (target) {
+//     observer.observe(target);
+// });

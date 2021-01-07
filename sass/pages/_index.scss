@@ -14,6 +14,7 @@
 
     &__description {
         flex: 0 1 41.5%;
+        transform: translateY(8rem);
 
         @media only screen and (max-width: $phone-screen){
             //transform: translateY(-33%);
@@ -30,3 +31,4 @@
         line-height: 90%;
     }
 }
+

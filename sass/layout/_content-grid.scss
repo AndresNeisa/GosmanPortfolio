@@ -8,6 +8,16 @@
         grid-row-end: 3;
         margin-right: 20rem;
         text-align: right;
+
+        transform: translateX(-5rem);
+    }
+
+    &__description{
+        transform: translateX(5rem);
+    }
+
+    &__sub-title{
+        transform: translateX(5rem);
     }
 
     @media only screen and (max-width: $phone-screen) {

@@ -1,0 +1,80 @@
+.content{
+    &__title{
+        transform: translateX(-5rem);
+    }
+    &__description{
+        transform: translateX(5rem);
+    }
+}
+
+.project{
+    &__links{
+        opacity: 0;
+        &:first-of-type{
+            transform: translateX(-5rem);
+        }
+        &:last-of-type{
+            transform: translateX(5rem);
+        }
+    }
+}
+
+
+.show-on-scroll{
+    opacity: 0;
+    transition: 
+        opacity 2s 0.1s ease-out,
+        transform 2s 0.1S ease-out;
+
+    will-change: transform, opacity;    
+}
+
+.projects{
+    &__item{
+        transform: translate(5rem, -1.5rem);
+
+        transition: 
+        opacity 1s 0.1s ease-out,
+        transform 1s 0.1S ease-out;
+    }
+}
+
+.is-visible{
+    opacity: 1;
+
+    &.hero__description{
+        transform: translateY(0);
+    }
+
+    &.content-grid{
+        &__title,
+        &__description,
+        &__sub-title{
+        transform: translateX(0);
+        }
+    }
+
+    &.content{
+        &__title,
+        &__description{
+            transform: translateX(0);
+        }
+    }
+
+    &.projects{
+        &__item{
+            transform: translate(0,0);
+        }
+    }
+
+    &.project{
+        &__links{
+            opacity: 0.3;
+            transform: translateX(0);
+            transition: 
+                transform 1s 0.1S ease-out;
+        }
+    }
+}
+
+// .is-visible
