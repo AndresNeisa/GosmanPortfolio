@@ -2,7 +2,7 @@
     &__title{
         transform: translateX(-5rem);
     }
-    &__description{
+    &__description.show-on-scroll{
         transform: translateX(5rem);
     }
 }
@@ -57,7 +57,7 @@
 
 .navigation{
     &__item{
-        transform: translateY(-3rem);
+        
         // opacity: 0;
     }
 }
@@ -68,6 +68,12 @@
     &.hero__description,
     &.header-primary{
         transform: none;
+    }
+
+    &.hero__description{
+        @media only screen and (max-width: $phone-screen){
+            opacity: 0.3;
+        }
     }
 
     &.content-grid{
@@ -81,7 +87,7 @@
     &.content{
         &__title,
         &__description{
-            transform: translateX(0);
+            transform: none;
         }
     }
 
@@ -109,11 +115,13 @@
         transform: none;
         transition: 
                 transform 1s ease-out,
-                opacity 1s ease-out;
+                opacity 1s ease-out,
+                background-color 0.5s ease;
         @for $i from 1 through 3{
             &:nth-child(#{$i}){
                 transition-delay: 0.2S*$i;
             }
         }
     }
+    
 }
