@@ -403,8 +403,7 @@ body {
     margin-top: 1.8rem;
     width: 100%; }
   .hero__description {
-    flex: 0 1 41.5%;
-    transform: translateY(8rem); }
+    flex: 0 1 41.5%; }
     @media only screen and (max-width: 500px) {
       .hero__description {
         margin-top: -150px;
@@ -478,41 +477,23 @@ body {
   .projects-section .content__description {
     flex: 0 1 100%; } }
 
-.content__title {
-  transform: translateX(-5rem); }
-
-.content__description.show-on-scroll {
-  transform: translateX(5rem); }
-
-.project__links {
-  opacity: 0; }
-  .project__links:first-of-type {
-    transform: translateX(-5rem); }
-  .project__links:last-of-type {
-    transform: translateX(5rem); }
-
-.project__header--numeration {
-  opacity: 0;
-  transform: translateX(5rem); }
-
-.header-primary {
-  transform: translateX(-5rem); }
-
 .show-on-scroll {
   opacity: 0;
-  transition: opacity 2s 0.1s ease-out, transform 2s 0.1S ease-out;
-  will-change: transform, opacity; }
-
-.projects__item {
-  transform: translate(5rem, -1.5rem);
-  transition: opacity 1s 0.1s ease-out, transform 1s 0.1S ease-out; }
+  transition: opacity 1s 0.1s ease-out, transform 1s 0.1S ease-out;
+  will-change: transform, opacity;
+  transform: translateX(-5rem); }
 
 .footer__item {
   transform: translateY(3rem);
   opacity: 0; }
 
+.navigation__item {
+  transform: translateY(-3rem); }
+
 .is-visible {
   opacity: 1; }
+  .is-visible.show-on-scroll {
+    transform: none; }
   .is-visible.hero__description, .is-visible.header-primary {
     transform: none; }
   @media only screen and (max-width: 500px) {

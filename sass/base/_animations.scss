@@ -1,52 +1,54 @@
-.content{
-    &__title{
-        transform: translateX(-5rem);
-    }
-    &__description.show-on-scroll{
-        transform: translateX(5rem);
-    }
-}
+// .content{
+//     &__title{
+//         // transform: translateX(-5rem);
+//     }
+//     &__description.show-on-scroll{
+//         // transform: translateX(5rem);
+//     }
+// }
 
-.project{
-    &__links{
-        opacity: 0;
-        &:first-of-type{
-            transform: translateX(-5rem);
-        }
-        &:last-of-type{
-            transform: translateX(5rem);
-        }
-    }
+// .project{
+//     &__links{
+//         opacity: 0;
+//         &:first-of-type{
+//             transform: translateX(-5rem);
+//         }
+//         &:last-of-type{
+//             transform: translateX(5rem);
+//         }
+//     }
 
-    &__header--numeration{
-        opacity: 0;
-        transform: translateX(5rem);
-    }
-}
+//     &__header--numeration{
+//         opacity: 0;
+//         transform: translateX(5rem);
+//     }
+// }
 
-.header-primary{
-    transform: translateX(-5rem);
-}
+// .header-primary{
+//     transform: translateX(-5rem);
+// }
 
 
 .show-on-scroll{
     opacity: 0;
     transition: 
-        opacity 2s 0.1s ease-out,
-        transform 2s 0.1S ease-out;
-
-    will-change: transform, opacity;    
-}
-
-.projects{
-    &__item{
-        transform: translate(5rem, -1.5rem);
-
-        transition: 
         opacity 1s 0.1s ease-out,
         transform 1s 0.1S ease-out;
-    }
+
+    will-change: transform, opacity;    
+
+    transform: translateX(-5rem);
 }
+
+// .projects{
+//     &__item{
+//         transform: translate(5rem, -1.5rem);
+
+//         transition: 
+//         opacity 1s 0.1s ease-out,
+//         transform 1s 0.1S ease-out;
+//     }
+// }
 
 .footer{
     &__item{
@@ -57,13 +59,17 @@
 
 .navigation{
     &__item{
-        
-        // opacity: 0;
+        transform: translateY(-3rem);
     }
 }
 
+
 .is-visible{
     opacity: 1;
+
+    &.show-on-scroll{
+        transform: none;
+    }
 
     &.hero__description,
     &.header-primary{
