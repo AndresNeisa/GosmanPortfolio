@@ -404,7 +404,7 @@ body {
     width: 100%; }
   .hero__description {
     flex: 0 1 41.5%;
-    transform: translateY(8rem); }
+    transform: translateX(5rem); }
     @media only screen and (max-width: 500px) {
       .hero__description {
         margin-top: -150px;
@@ -500,7 +500,7 @@ body {
 
 .show-on-scroll {
   opacity: 0;
-  transition: opacity 2s 0.1s ease-out, transform 2s 0.1S ease-out;
+  transition: opacity 1s 0.1s ease-out, transform 1s 0.1S ease-out;
   will-change: transform, opacity; }
 
 .projects__item {
